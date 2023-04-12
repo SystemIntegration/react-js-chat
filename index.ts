@@ -12,8 +12,13 @@ app.get('/', (req, res) => {
 io.emit('some event', { someProperty: 'some value', otherProperty: 'other value' }); // This will emit the event to all connected sockets
 
 io.on('connection', (socket) => {
+    socket.on('newUser', (username) => {
+        socket.username = username;
+        console.log(`${username} has joined the chat`);
+    });
     socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
+        const username = socket.username;
+        io.emit('chat message', `${username}: ${msg}`);
     });
 });
 
@@ -21,17 +26,17 @@ server.listen(3000, () => {
     console.log('listening on *:3000');
 });
 
-io.on('connection', (socket) => {
-    // Listen for the 'newUser' event and store the username in the socket object
-    socket.on('newUser', (username) => {
-        socket.username = username;
-        console.log(`${username} has joined the chat`);
-    });
+// io.on('connection', (socket) => {
+//     // Listen for the 'newUser' event and store the username in the socket object
+//     // socket.on('newUser', (username) => {
+//     //     socket.username = username;
+//     //     console.log(`${username} has joined the chat`);
+//     // });
 
-    // Listen for the 'chatMessage' event and broadcast the message to all the clients
-    socket.on('chatMessage', (message) => {
-        const username = socket.username;
-        console.log(`${username}: ${message}`);
-        socket.broadcast.emit('chatMessage', `${username}: ${message}`);
-    });
-});
+//     // Listen for the 'chatMessage' event and broadcast the message to all the clients
+//     socket.on('chatMessage', (message) => {
+//         const username = socket.username;
+//         console.log(`${username}: ${message}`);
+//         socket.broadcast.emit('chatMessage', `${username}: ${message}`);
+//     });
+// });

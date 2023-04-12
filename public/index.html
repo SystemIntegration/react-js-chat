@@ -96,7 +96,7 @@
         var item = document.createElement('div');
         item.innerHTML = `<p style="
     font-size: 1.5rem;
-">${username} <span style="
+">${msg.split(":")[0]} <span style="
     font-size: 8px;
 ">${new Date().toLocaleTimeString()}</span></p>
     <p style="
@@ -104,7 +104,8 @@
     height: 1.5rem;
     padding: 10px 1rem;
     border-radius: 2rem;
-">${msg}</p>`
+    width:${msg.split(": ")[1].length}ch;
+">${msg.split(":")[1]}</p>`
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
     });
