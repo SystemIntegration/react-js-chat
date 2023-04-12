@@ -13,8 +13,7 @@ io.emit('some event', { someProperty: 'some value', otherProperty: 'other value'
 
 io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
-        const username = socket.username;
-        io.emit('chat message', `${username}: ${msg}`);
+        io.emit('chat message', msg);
     });
 });
 
