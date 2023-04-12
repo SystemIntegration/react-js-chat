@@ -101,10 +101,13 @@
 ">${new Date().toLocaleTimeString()}</span></p>
     <p style="
     border: 1px solid green;
-    height: 1.5rem;
+    height: auto;
     padding: 10px 1rem;
     border-radius: 2rem;
-    width:${msg.split(": ")[1].length}ch;
+    margin:0;
+    display:inline-block;
+    max-width:80%;
+    word-wrap:break-word;
 ">${msg.split(":")[1]}</p>`
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
