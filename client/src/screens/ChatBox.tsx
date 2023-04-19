@@ -22,7 +22,7 @@ function stringAvatar(name: string) {
         sx: {
             bgcolor: stringToColor(name),
         },
-        children: `${name.split(' ')[0][0]}`,
+        children: `${name.split(' ')[0][0].toLocaleUpperCase()}${name.split(' ')[0][1].toLocaleUpperCase()}`,
     };
 }
 
@@ -44,9 +44,9 @@ export default function ChatBoxReciver({ user, message,time
             style={{ display: "flex", justifyContent: "flex-start", flexDirection: "row" }
             }
         >
-            <Avatar style={{ width: 34, height: 34, margin: "0 0.5rem" }} {...stringAvatar(user)} />
+            <Avatar style={{ width: 40, height: 40, margin: "0 0.5rem" }} {...stringAvatar(user)} />
             <p style={{ padding: 10, backgroundColor: "#2B333B", borderRadius: 10, maxWidth: "60%" }}>
-                <strong style={{ fontSize: 13 }}> {user},{time} </strong>
+                <strong style={{ fontSize: 13 }}> {user},</strong>{time}
                 <p style={{ margin: "0.5rem 0 0 0" }}> {message} </p>
             </p>
         </div>
@@ -60,10 +60,10 @@ export function ChatBoxSender({ user, message,time
         }
         >
             <p style={{ padding: 10, backgroundColor: "#2B333B", borderRadius: 10, maxWidth: '60%' }}>
-                <strong style={{ fontSize: 13 }}> {user},{time} </strong>
+                <strong style={{ fontSize: 13 }}> {user},</strong>{time}
                 < p style={{ margin: '0.5rem 0 0 0' }}> {message} </p>
             </p>
-            < Avatar style={{ width: 34, height: 34, margin: '0 0.5rem' }} {...stringAvatar(user)} />
+            < Avatar style={{ width: 40, height: 40, margin: '0 0.5rem' }} {...stringAvatar(user)} />
         </div>
     )
 }

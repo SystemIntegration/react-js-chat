@@ -12,7 +12,7 @@ const styles : any = {
     borderWidth: 0,
     color: '#fff',
     position:'absolute',
-    right:'19px',
+    right:'3.5rem',
   },
   textarea: {
     width: '100%',
@@ -26,7 +26,7 @@ const styles : any = {
     display: "flex",
     alignItems: 'center',
     paddingTop: '1rem',
-    margin:'0 1rem'
+    margin:'0 3.25rem'
   }
 }
 
