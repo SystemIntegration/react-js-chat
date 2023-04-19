@@ -1,30 +1,32 @@
 import { Button } from "@mui/material"
 import { useState } from "react"
 
-const styles = {
+const styles : any = {
   button: {
     width: '10%',
     height: 50,
     fontWeight: 'bold',
-    borderRadius: 10,
+    borderRadius: '40px',
     fontSize: 18,
     backgroundColor: '#34b7f1',
     borderWidth: 0,
-    color: '#fff'
+    color: '#fff',
+    position:'absolute',
+    right:'19px',
   },
   textarea: {
-    width: '60%',
+    width: '100%',
     height: 50,
-    borderRadius: 10,
+    borderRadius: '40px',
     borderWidth: 0,
-    padding: '3px 7px',
+    padding: '3px 17px',
     fontSize: 18
   },
   textContainer: {
     display: "flex",
-    justifyContent: 'space-evenly',
     alignItems: 'center',
     paddingTop: '1rem',
+    margin:'0 1rem'
   }
 }
 
@@ -50,7 +52,7 @@ function InputText({ addMessage
       <div style={styles.textContainer} >
         <input
           style={styles.textarea}
-          placeholder="Message"
+          placeholder="Type a message"
           value={message}
           onChange={e => setMessage(e.target.value)}
         >
