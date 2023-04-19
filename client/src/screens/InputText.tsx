@@ -1,33 +1,33 @@
 import { Button } from "@mui/material"
 import { useState } from "react"
 
-const styles : any = {
+const styles: any = {
+  form: {
+    background: 'rgba(0,0,0,0.15)',
+    padding: '0.25rem',
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    display: 'flex',
+    height: '3rem',
+    boxSizing: 'border-box',
+  },
   button: {
-    width: '10%',
-    height: 50,
-    fontWeight: 'bold',
-    borderRadius: '40px',
-    fontSize: 18,
     backgroundColor: '#34b7f1',
-    borderWidth: 0,
-    color: '#fff',
-    position:'absolute',
-    right:'3.5rem',
-    padding:'0 4rem'
-  },
-  textarea: {
-    width: '100%',
-    height: 50,
+    border: 'none',
     borderRadius: '40px',
-    borderWidth: 0,
-    padding: '3px 17px',
-    fontSize: 18
+    padding: '0 1rem',
+    margin: '0.25rem',
+    outline: 'none',
+    color: '#fff',
   },
-  textContainer: {
-    display: "flex",
-    alignItems: 'center',
-    paddingTop: '1rem',
-    margin:'0 3.25rem'
+  input: {
+    border: 'none',
+    padding: '0 1rem',
+    flexGrow: '1',
+    borderRadius: '2rem',
+    margin: '0.25rem',
   }
 }
 
@@ -40,7 +40,7 @@ function InputText({ addMessage
 
   const [message, setMessage] = useState('')
 
-  function addAMessage(e : any) {
+  function addAMessage(e: any) {
     e.preventDefault()
     addMessage({
       message
@@ -49,24 +49,22 @@ function InputText({ addMessage
   }
 
   return (
-    <form action="" method="" >
-      <div style={styles.textContainer} >
-        <input
-          style={styles.textarea}
-          placeholder="Type a message"
-          value={message}
-          onChange={e => setMessage(e.target.value)}
-        >
-        </input>
-        <Button
-          onClick={(e) => addAMessage(e)}
-          disabled={message.length > 0 ? false : true}
-          style={styles.button}
-          type="submit"
-        >
-          ENTER
-        </Button>
-      </div>
+    <form action="" method="" style={styles.form} >
+      <input
+        style={styles.input}
+        placeholder="Type a message"
+        value={message}
+        onChange={e => setMessage(e.target.value)}
+      >
+      </input>
+      <Button
+        onClick={(e) => addAMessage(e)}
+        disabled={message.length > 0 ? false : true}
+        style={styles.button}
+        type="submit"
+      >
+        ENTER
+      </Button>
     </form>
   )
 }

@@ -64,7 +64,7 @@ export default function ChatContainer() {
     useScrollToEnd();
 
     function ChatsList() {
-        return (<div style={{ height: '75vh' }}>
+        return (<div style={{ height: '80vh' }}>
             {
                 chats.map((chat, index) => {
                     if (chat.user === user) return <ChatBoxSender key={index} message={chat.message} user={chat.user} time={chat.time} />
