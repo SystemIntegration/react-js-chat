@@ -13,6 +13,7 @@ const styles : any = {
     color: '#fff',
     position:'absolute',
     right:'3.5rem',
+    padding:'0 4rem'
   },
   textarea: {
     width: '100%',
