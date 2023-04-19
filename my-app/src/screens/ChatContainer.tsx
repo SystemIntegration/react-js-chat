@@ -6,6 +6,7 @@ import UserLogin from './UserLogin.tsx';
 import db from './firebase.ts'
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { Button } from 'antd';
+import ScrollToBottom, { useScrollToEnd, useScrollToTop } from 'react-scroll-to-bottom';
 
 export default function ChatContainer() {
 
@@ -59,9 +60,11 @@ export default function ChatContainer() {
         localStorage.removeItem("avatar")
         setUser("")
     }
+    useScrollToEnd();
 
     function ChatsList() {
-        return (<div style={{ height:'75vh' , overflow:'scroll' , overflowX:'hidden'}}>
+        return (<div style={{ height:'75vh'}}>
+
             {
                 chats.map((chat, index) => {
                     if (chat.user === user) return <ChatBoxSender key={index} message={chat.message} user={chat.user} />
@@ -81,8 +84,10 @@ export default function ChatContainer() {
                             <h4> Welcome {user}</h4>
                             <Button onClick={() => logout()} style={{ color: "blue", cursor: 'pointer' }} >Log Out</Button>
                         </div>
-                        <ChatsList
-                        />
+                        <ScrollToBottom mode='bottom'>
+                            <ChatsList
+                            />
+                        </ScrollToBottom>
                         <InputText addMessage={addMessage} />
                     </div>
                     : <UserLogin setUser={setUser} />
