@@ -29,13 +29,15 @@ function stringAvatar(name: string) {
 interface ChatBoxReciverProps {
     user: string;
     message: string;
+    time: string;
 }
 interface ChatBoxSenderProps {
     user: string;
     message: string;
+    time: string;
 }
 
-export default function ChatBoxReciver({ user, message,
+export default function ChatBoxReciver({ user, message,time
 }: ChatBoxReciverProps): JSX.Element {
     return (
         <div
@@ -44,21 +46,21 @@ export default function ChatBoxReciver({ user, message,
         >
             <Avatar style={{ width: 34, height: 34, margin: "0 0.5rem" }} {...stringAvatar(user)} />
             <p style={{ padding: 10, backgroundColor: "#2B333B", borderRadius: 10, maxWidth: "60%" }}>
-                <strong style={{ fontSize: 13 }}> {user} </strong>
+                <strong style={{ fontSize: 13 }}> {user},{time} </strong>
                 <p style={{ margin: "0.5rem 0 0 0" }}> {message} </p>
             </p>
         </div>
     );
 }
 
-export function ChatBoxSender({ user, message,
+export function ChatBoxSender({ user, message,time
 }: ChatBoxSenderProps): JSX.Element {
     return (
         <div style={{ display: 'flex', justifyContent: 'flex-end', flexDirection: 'row' }
         }
         >
             <p style={{ padding: 10, backgroundColor: "#2B333B", borderRadius: 10, maxWidth: '60%' }}>
-                <strong style={{ fontSize: 13 }}> {user} </strong>
+                <strong style={{ fontSize: 13 }}> {user},{time} </strong>
                 < p style={{ margin: '0.5rem 0 0 0' }}> {message} </p>
             </p>
             < Avatar style={{ width: 34, height: 34, margin: '0 0.5rem' }} {...stringAvatar(user)} />
