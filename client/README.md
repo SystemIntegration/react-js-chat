@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+## React Chat app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+  - This is a simple chat application.
 
-## Available Scripts
+## Features
+  - Real-time communication between clients and server using Socket.io
+  - Real-time messaging.
 
+## Technologies Used
+  - ReactJS - JavaScript library for building user interfaces
+  - Material ui - For designing 
+  - Ant Design - For designing
+  - Socket.io - Real-time communication library
+  - Node.js - JavaScript runtime environment
+  - Express - Web application framework for Node.js
+
+
+## Getting Started
+  - Clone the repository: <code>git clone git@github.com:systemintegration/react-weather.git</code>
+  - Navigate to the client folder and install the required dependencies:
+      - <code>cd client</code>
+      - <code>npm install</code>
+  - Navigate to the server folder and install the required dependencies:
+      - <code>cd server</code>
+      - <code>npm install</code>
+  - Start the server by navigating to the server folder and running the following command:
+      - <code>node app.ts</code>
+  - Start the client by navigating to the client folder and running the following command:
+      - <code>npm start</code>
+  - Open your browser and go to http://localhost:3000 to access the application.
+
+## Contributing
+  - Contributions are welcome! To contribute to the project, follow these steps:
+    - Fork the repository
+    - Create a new branch: <code>git checkout -b my-feature-branch</code>
+    - Make your changes and commit them: <code>git commit -am 'Add some feature'</code>
+    - Push your changes to your branch: <code>git push origin my-feature-branch</code>
+    - Create a new pull request and explain your changes
 In the project directory, you can run:
 
-### `npm start`
+## Screenshots
+    - User Login page when run the script.
+      ![Login page..png](./Login page..png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    - When user login from two different browsers 
+      ![Welcome page..png](./Welcome page..png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    - User chat page.
+      ![real-time-chat with time..png](./real-time-chat with time..png)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Demo
+   - You can try out the application at <a href="https://systemintegration.github.io/react-weather">https://systemintegration.github.io/react-weather</a>
