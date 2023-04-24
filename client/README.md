@@ -40,14 +40,17 @@
 In the project directory, you can run:
 
 ## Screenshots
-    - User Login page when run the script.
-      ![Login page..png](./Login page..png)
+  User Login page when run the script.
 
-    - When user login from two different browsers 
-      ![Welcome page..png](./Welcome page..png)
+  ![Login page..png](./Login page..png)
+  
+  When user login from two different browsers 
+  
+  ![Welcome page..png](./Welcome page..png)
 
-    - User chat page.
-      ![real-time-chat with time..png](./real-time-chat with time..png)
+  User chat page.
+  
+  ![real-time-chat with time..png](./real-time-chat with time..png)
 
 ## Demo
    - You can try out the application at <a href="https://systemintegration.github.io/react-weather">https://systemintegration.github.io/react-weather</a>
