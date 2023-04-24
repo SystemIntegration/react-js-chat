@@ -18,7 +18,7 @@
 
 
 ## Getting Started
-  - Clone the repository: <code>git clone git@github.com:systemintegration/react-js-chat.git</code>
+  - Clone the repository: <code>git clone git@github.com:systemintegration/react-ts-chat.git</code>
   - Navigate to the client folder and install the required dependencies:
       - <code>cd client</code>
       - <code>npm install</code>
@@ -64,4 +64,4 @@ In the project directory, you can run:
   ![real-time-chat with time..png](./real-time-chat with time..png)
 
 ## Demo
-   - You can try out the application at <a href="https://systemintegration.github.io/react-js-chat">https://systemintegration.github.io/react-js-chat</a>
+   - You can try out the application at <a href="https://systemintegration.github.io/react-ts-chat">https://systemintegration.github.io/react-ts-chat</a>
