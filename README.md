@@ -5,19 +5,20 @@
 
 ## Features
   - Real-time communication between clients and server using Socket.io
-  - Real-time messaging.
+  - Real-time communication between users.
 
 ## Technologies Used
   - ReactJS - JavaScript library for building user interfaces
-  - Material ui - For designing 
+  - Material ui - For designing
   - Ant Design - For designing
   - Socket.io - Real-time communication library
   - Node.js - JavaScript runtime environment
   - Express - Web application framework for Node.js
+  - Firebase - For storage chat message.
 
 
 ## Getting Started
-  - Clone the repository: <code>git clone git@github.com:systemintegration/react-weather.git</code>
+  - Clone the repository: <code>git clone git@github.com:systemintegration/react-js-chat.git</code>
   - Navigate to the client folder and install the required dependencies:
       - <code>cd client</code>
       - <code>npm install</code>
@@ -29,6 +30,16 @@
   - Start the client by navigating to the client folder and running the following command:
       - <code>npm start</code>
   - Open your browser and go to http://localhost:3000 to access the application.
+
+## Setup Firebase account for storage.
+  - Login to your firebase google account
+  - Click on <b>Get started</b> button, after that click on <b>Create a project</b>.
+  - FillUp all the details of your project, when you finished them click on continue button.
+  - Create Cloud Fire store.
+  - For add details on firebase.ts file you can click on project overview's left side button (setting).
+      - Add apps information of your project and add all the details.
+      - Copy Firebase SDK from the details.
+
 
 ## Contributing
   - Contributions are welcome! To contribute to the project, follow these steps:
@@ -43,14 +54,14 @@ In the project directory, you can run:
   User Login page when run the script.
 
   ![Login page..png](./Login page..png)
-  
-  When user login from two different browsers 
-  
+
+  When user login from two different browsers
+
   ![Welcome page..png](./Welcome page..png)
 
   User chat page.
-  
+
   ![real-time-chat with time..png](./real-time-chat with time..png)
 
 ## Demo
-   - You can try out the application at <a href="https://systemintegration.github.io/react-weather">https://systemintegration.github.io/react-weather</a>
+   - You can try out the application at <a href="https://systemintegration.github.io/react-js-chat">https://systemintegration.github.io/react-js-chat</a>
