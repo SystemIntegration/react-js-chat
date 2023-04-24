@@ -1,6 +1,7 @@
 import React from 'react'
 import { Avatar } from '@mui/material';
 
+// Method for avatar name to color
 function stringToColor(string: string) {
     let hash = 0;
     let i;
@@ -17,6 +18,7 @@ function stringToColor(string: string) {
     return color;
 }
 
+// Method for made avatar
 function stringAvatar(name: string) {
     return {
         sx: {
@@ -26,7 +28,7 @@ function stringAvatar(name: string) {
     };
 }
 
-interface ChatBoxReciverProps {
+interface ChatBoxReceiverProps {
     user: string;
     message: string;
     time: string;
@@ -37,8 +39,9 @@ interface ChatBoxSenderProps {
     time: string;
 }
 
-export default function ChatBoxReciver({ user, message,time
-}: ChatBoxReciverProps): JSX.Element {
+// Method for show user chats
+export default function ChatBoxReceiver({ user, message,time
+}: ChatBoxReceiverProps): JSX.Element {
     return (
         <div
             style={{ display: "flex", justifyContent: "flex-start", flexDirection: "row" }
@@ -53,6 +56,7 @@ export default function ChatBoxReciver({ user, message,time
     );
 }
 
+// Method for show opposite side user chats
 export function ChatBoxSender({ user, message,time
 }: ChatBoxSenderProps): JSX.Element {
     return (

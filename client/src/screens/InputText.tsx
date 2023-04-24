@@ -1,6 +1,7 @@
 import { Button } from "@mui/material"
 import { useState } from "react"
 
+// Variable for set styles for Input field.
 const styles: any = {
   form: {
     background: 'rgba(0,0,0,0.15)',
@@ -40,6 +41,7 @@ function InputText({ addMessage
 
   const [message, setMessage] = useState('')
 
+  // Method for send message to parent
   function addAMessage(e: any) {
     e.preventDefault()
     addMessage({

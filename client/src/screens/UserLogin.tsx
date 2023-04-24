@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { CommentOutlined } from '@ant-design/icons'
 import _ from 'lodash'
 
+// Variable for set styles for button.
 const button = {
     width: '10%',
     height: 50,
@@ -18,25 +18,22 @@ interface UserLoginProps {
     setUser: any;
 }
 
-
-
-
+// Method for user login page
 export default function UserLogin({ setUser
 }: UserLoginProps): JSX.Element {
 
     const [user, setAUser] = useState("")
 
+    // Method for set user value (Name) in chat app.
     function handleSetUser() {
         if (!user) return
         localStorage.setItem("user", user)
         setUser(user)
-        localStorage.setItem("avatar", `https://picsum.photos/id/${_.random(1, 1000)}/200/300`)
-
     }
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center', margin: 0 }}>Welcome to BMV Chat Bot </h1>
+            <h1 style={{ textAlign: 'center', margin: 0 }}>Welcome to BMV Chat </h1>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <input
                     style={{ margin: 10, height: 30, width: '25%', borderRadius: 10, borderWidth: 10, fontSize: 15, paddingInline: 5 }}
